@@ -18,8 +18,9 @@ public class ExcelObject {
         sheet = wb.getSheetAt(index);
     }
 
-    public ExcelObject(String name, String sheet){
-        FileOutputStream fileOutputStream = new FileOutputStream();
+    public ExcelObject(String name, String sheet) throws Exception{
+        File myFile = new File(name);
+        FileInputStream fileInputStream = new FileInputStream(myFile);
 
     }
 }
