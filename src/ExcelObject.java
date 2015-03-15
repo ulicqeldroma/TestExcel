@@ -3,7 +3,6 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 
 /**
  * Created by israel on 14/03/15.
@@ -23,6 +22,9 @@ public class ExcelObject {
         FileInputStream fileInputStream = new FileInputStream(myFile);
         wb = new HSSFWorkbook(fileInputStream);
         sheet = wb.createSheet(sheetName);
-        
+    }
+
+    public void copyRow(HSSFSheet sheetCopy){
+
     }
 }
