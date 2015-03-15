@@ -18,9 +18,11 @@ public class ExcelObject {
         sheet = wb.getSheetAt(index);
     }
 
-    public ExcelObject(String name, String sheet) throws Exception{
+    public ExcelObject(String name, String sheetName) throws Exception{
         File myFile = new File(name);
         FileInputStream fileInputStream = new FileInputStream(myFile);
-
+        wb = new HSSFWorkbook(fileInputStream);
+        sheet = wb.createSheet(sheetName);
+        
     }
 }
